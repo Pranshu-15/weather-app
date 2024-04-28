@@ -1,0 +1,153 @@
+.main-header{
+    text-align: center;
+}
+.search-input {
+  display: flex;
+}
+button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+  }
+  
+  button svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button:hover svg {
+    transform: translateX(5px) rotate(90deg);
+  }
+  
+  button:hover span {
+    transform: translateX(7px);
+  }
+  
+.main-box {
+  display: flex;
+  width: 100%;
+  display: flex;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 40vw;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 29%;
+  padding: 2%;
+}
+.left-box {
+  width: 95%;
+  height: 64vh;
+  border-radius: 10px;
+  position: absolute;
+}
+.head {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 5px;
+}
+.head input{
+    padding: 14px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.city-name {
+  position: absolute;
+  text-align: center;
+  width: 70%;
+  top: 8%;
+}
+.mid-content {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: center;
+}
+.weather-icon {
+  top: 26%;
+  right: 11%;
+}
+
+.weather-details {
+  height: 18vh;
+  text-align: left;
+  padding-top: 23px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.temp-detail {
+  position: absolute;
+  bottom: 7%;
+  padding: 7px;
+  text-align: center;
+}
+.comic-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1c77df;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .comic-button:hover {
+    background-color: #fff;
+    color: #3b94f2;
+    border: 2px solid #25a0d0;
+    box-shadow: 5px 5px 0px #1c778c;
+  }
+  
+  .comic-button:active {
+    background-color: #dc33e2;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+  
+@media screen and (max-width: 768px) {
+  .main-box {
+    left: 2%;
+    width: 94%;
+    top: 12%;
+  }
+}
