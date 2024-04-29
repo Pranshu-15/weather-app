@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that allows users to search for the current weather condition of a city. The application uses the OpenWeatherMap API to fetch weather data and displays it along with an appropriate background image based on the weather condition.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Before running the application, make sure you have the following installed on your machine:
 
-### `npm start`
+- Node.js (version 12 or later)
+- npm (Node Package Manager)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+```
+git clone https://github.com/your-username/weather-app.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory:
 
-### `npm run build`
+```
+cd weather-app
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install the required dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Configuration
 
-### `npm run eject`
+1. Obtain an API key from OpenWeatherMap by creating an account on their website: [OpenWeatherMap](https://openweathermap.org/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. In the project directory, create a new file named `.env` and add the following line, replacing `YOUR_API_KEY` with the actual API key you obtained:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+REACT_APP_OPENWEATHERMAP_API_KEY=YOUR_API_KEY
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Running the Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To run the application locally, execute the following command:
 
-## Learn More
+```
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This will start the development server and open the application in your default web browser. If it doesn't open automatically, you can access it by navigating to `http://localhost:3000` in your web browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Building for Production
 
-### Code Splitting
+To create a production build of the application, run the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+npm run build
+```
 
-### Analyzing the Bundle Size
+This will create an optimized build of the application in the `build` folder. You can then deploy the contents of the `build` folder to a web server or hosting service of your choice.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Usage
 
-### Making a Progressive Web App
+1. Once the application is running, you will see an input field where you can enter the name of a city.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. After entering the city name, press Enter or click outside the input field. The application will fetch the weather data for the specified city and display the following information:
+   - City name and country
+   - Current weather condition (e.g., Sunny, Cloudy, Rain)
+   - Temperature (in Celsius or Fahrenheit)
+   - Wind speed
+   - Humidity
+   - An appropriate background image based on the weather condition
 
-### Advanced Configuration
+3. You can toggle between Celsius and Fahrenheit units by clicking the "Switch to Fahrenheit/Celsius" button.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. To search for a different city, simply enter the new city name in the input field and repeat the process.
 
-### Deployment
+5. If an error occurs during the API request or if the entered city is not found, an error message will be displayed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Dependencies
 
-### `npm run build` fails to minify
+The application uses the following dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React
+- Axios (for making HTTP requests to the OpenWeatherMap API)
+- react-icons (for displaying weather icons)
